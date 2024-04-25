@@ -1,0 +1,7 @@
+googlemaps
+shapely
+numpy
+osmnx==1.9.2
+networkx
+matplotlib
+scikit-learn
