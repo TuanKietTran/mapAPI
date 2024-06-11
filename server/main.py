@@ -3,7 +3,7 @@ from fastapi import FastAPI, status
 from fastapi.responses import JSONResponse
 import googlemaps
 from contextlib import asynccontextmanager
-from api import api_router
+from .api import api_router
 from starlette.config import Config
 
 # Load environment variables
@@ -23,7 +23,7 @@ exception_handlers = {404: not_found}
 async def lifespan(api: FastAPI):
     # Initialize the Google Maps client and store it in app state
     log.info("Setting up context...")
-    api.state.gmaps = googlemaps.Client(key='')  # Replace 'YOUR_API_KEY' with your actual Google Maps API key
+    api.state.gmaps = googlemaps.Client(key=api_key)  # Replace 'YOUR_API_KEY' with your actual Google Maps API key
     yield
     # Cleanup actions here if necessary (e.g., closing connections)
 
