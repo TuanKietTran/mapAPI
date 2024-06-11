@@ -1,0 +1,5 @@
+- [x]  Khởi tạo dữ liệu ma trận từ bản đồ google map, gồm 1 vùng diện tích có tối thiểu 100 đỉnh vs 100 cạnh trong khu vực Tp.HCM. (2) - Road, Place, Geocoding API
+- [x]  Cài đặt 3 thuật toán Dijstra, Bellman-Ford, Floyd warshall trên dữ liệu khởi tạo và đưa ra đánh giá về performance – chọn ngẫu nhiên các cặp đỉnh (3)
+- [ ]  Đánh giá performance bằng cách chọn 2 điểm -> đưa ra lý do tại sao chọn 2 điểm đó. Chọn các điểm 1 cách tổng quan, bao quát nhiều trường hợp
+- [ ]  Cho phép nhập điểm đầu và điểm cuối trên bản đồ và xuất ra 3 đường đi ngắn nhất. Minh họa 3 đường đi trên bản đồ (google map là 1 điểm cộng) (4) Road, Place, Geocoding API
+- [ ]  So sánh kết quả giải thuật vs dữ liệu thực tế từ google. (1) - Direction (+ Distance Matrix) API
