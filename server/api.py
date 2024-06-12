@@ -1,10 +1,8 @@
 from typing import List, Optional
-from fastapi import APIRouter, FastAPI, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from datetime import datetime
-
-
 
 class ErrorMessage(BaseModel):
     msg: str
@@ -28,7 +26,7 @@ api_router = APIRouter(
 def healthcheck():
     return {"status": "ok"}
 
-@api_router.get("/routes/", summary="Get the top 3 shortest routes between two locations")
+@api_router.get("/routes", summary="Get the top 3 shortest routes between two locations")
 async def get_routes(request: Request, start: str, end: str):
     gmaps = request.app.state.gmaps
     try:
